@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark px-2">
+  <div class="side-nav-button p-2 me-3 text-light" (click)="SiNavToggle()">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <a class="navbar-brand px-4">eBid.com <i class="fa-solid fa-gavel"></i></a>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+          Product Categories
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Automobiles</a></li>
+          <li><a class="dropdown-item" href="#">Antiques</a></li>
+          <li><a class="dropdown-item" href="#"></a></li>
+          <li><a class="dropdown-item" href="#">Watches</a></li>
+          <li><a class="dropdown-item" href="#">Home & Garden</a></li>
+          <li><a class="dropdown-item" href="#">Electronics</a></li>
+
+        </ul>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+          Report Categories
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Sales Report</a></li>
+          <li><a class="dropdown-item" href="#">Listings Report</a></li>
+          <li><a class="dropdown-item" href="#">Dump Report</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <form class="d-flex me-5">
+    <input class="form-control me-2" type="search" placeholder="Search">
+    <button class="btn btn-outline-light" type="submit">Search</button>
+  </form>
+  <div class="profile-logo dropstart">
+    <button class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown">
+      Account
+    </button>
+    <ul class="dropdown-menu dropdown-menu-dark">
+      <li><a class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Sign Up</a></li>
+      <li><a routerLink="/auth" class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Log In</a></li>
+      <li><a  class="dropdown-item"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Log Out</a></li>
+    </ul>
+  </div>
+</nav>
+

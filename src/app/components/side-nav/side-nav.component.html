@@ -1,0 +1,49 @@
+<diV class="side-nav-content">
+  <ul class="nav-list" [ngClass]="{'nav-list-open': inputStatus}"  >
+    <li *ngFor="let item of list" class="nav-list-item ">
+      <i routerLink="{{item.link}}" class="{{item.icon}}"></i>
+      <span>
+        <a routerLink="{{item.link}}">{{item.name}}</a>
+      </span>
+    </li>
+  </ul>
+</diV>
+
+
+
+<!--<p>app-side-nav works!</p>-->
+
+<!--<div class="aside">-->
+<!--  <nav class="vertical-navbar">-->
+<!--    <ul>-->
+<!--      <li>-->
+<!--        <a routerLink="/courses" routerLinkActive="active">-->
+<!--          <span><i class="fa-solid fa-receipt"></i></span> All Products-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li>-->
+<!--        <a routerLink="/students" routerLinkActive="active">-->
+<!--          <span><i class="fa-solid fa-users"></i></span> Registered Users-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li>-->
+<!--        <a routerLink="/teachers" routerLinkActive="active">-->
+<!--          <span><i class="fa-solid fa-user-graduate"></i></span> Guest Users-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li>-->
+<!--        <a routerLink="/auction-items" routerLinkActive="active">-->
+<!--          <span><i class="fa-solid fa-person-chalkboard"></i></span> My Auctions-->
+<!--        </a>-->
+<!--      </li>-->
+<!--      <li>-->
+<!--        <a>-->
+<!--          <span><i class="fa-solid fa-school"></i></span> Reports-->
+<!--        </a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </nav>-->
+<!--</div>-->
+<!--<p>nav bar  works!</p>-->
+
+
