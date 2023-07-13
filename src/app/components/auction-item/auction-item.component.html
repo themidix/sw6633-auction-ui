@@ -1,0 +1,113 @@
+<!--<h2>View Auction Items</h2>-->
+<!--<ul>-->
+<!--  <li *ngFor="let auctionItem of auctionItems">-->
+<!--    <div class="auction-item">-->
+<!--      <h3>{{ auctionItem.description }}</h3>-->
+<!--      <img-->
+<!--        [src]="auctionItem.auctionItmImgUrl"-->
+<!--        alt="Item Image"-->
+<!--        width="200"-->
+<!--        height="auto"-->
+<!--      />-->
+
+<!--      <p>Starting Price: {{ auctionItem.startingPrice }}</p>-->
+<!--      <p>Auction Status: {{ auctionItem.auctionItemStatus }}</p>-->
+<!--      <p>Starting Time: {{ auctionItem.startingTime | date }}</p>-->
+<!--      <p>Closing Time: {{ auctionItem.closingTime | date }}</p>-->
+
+<!--      <ng-container *ngIf="auctionItem.currentHighestBid">-->
+<!--        <p>Current Highest Bid: {{ auctionItem.currentHighestBid.amount }}</p>-->
+<!--        <p>Bid Comment: {{ auctionItem.currentHighestBid.comment }}</p>-->
+<!--      </ng-container>-->
+
+<!--      <ng-container *ngIf="!auctionItem.currentHighestBid">-->
+<!--        <p>No current highest bid available.</p>-->
+<!--      </ng-container>-->
+
+<!--      <ng-container *ngIf="auctionItem.registeredUser">-->
+<!--        <p>Registered User ID: {{ auctionItem.registeredUser.registeredUserId }}</p>-->
+<!--        <p>First Name: {{ auctionItem.registeredUser.firstName }}</p>-->
+<!--        <p>Last Name: {{ auctionItem.registeredUser.lastName }}</p>-->
+<!--      </ng-container>-->
+
+<!--      <ng-container *ngIf="!auctionItem.registeredUser">-->
+<!--        <p>No registered user available.</p>-->
+<!--      </ng-container>-->
+
+<!--      <div class="bid-input">-->
+<!--        <input type="number"  class="bid-input-field" />-->
+<!--        <button class="bid-button">Bid</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </li>-->
+<!--</ul>-->
+
+
+<section class="product" *ngFor="let auctionItem of auctionItems">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="box">
+          <div class="product_image">
+            <img [src]="auctionItem.auctionItmImgUrl" alt="Item Image" width="200" height="auto" />
+          </div>
+          <div class="description">
+            <h4 class="small-text">{{ auctionItem.description }}</h4>
+          </div>
+          <div class="closing_time">
+            <h4 class="small-text">Close time: {{ auctionItem.closingTime }}</h4>
+          </div>
+          <div class="content">
+            <h4 class="small-text"><i class="fa-solid fa-dollar-sign"></i>{{ auctionItem.startingPrice }}</h4>
+            <h4 *ngIf="auctionItem.currentHighestBid" class="small-text">
+              Current Bid: {{ auctionItem.currentHighestBid.amount }}
+            </h4>
+            <h4 *ngIf="!auctionItem.currentHighestBid" class="small-text">No current bid available.</h4>
+            <!-- Button triggers modal -->
+            <button type="button" class="bd_btn" data-toggle="modal" (click)="openBidModal(auctionItem)" >
+              Place bid
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- ... Other columns ... -->
+    </div>
+  </div>
+</section>
+
+<!-- Custom bid modal -->
+<div #bidModal class="modal fade" tabindex="-1" role="dialog" [ngClass]="{'show': showModal}" [style.display]="showModal ? 'block' : 'none'">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- Modal header -->
+      <div class="modal-header">
+        <h5 class="modal-title">Place a Bid</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="closeBidModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <!-- Place your bid form here -->
+        <!-- Example: -->
+        <form>
+          <div class="form-group">
+            <label for="bidAmount">Bid Amount</label>
+            <input type="number" class="form-control" id="bidAmount" placeholder="Enter bid amount">
+          </div>
+          <div class="form-group">
+            <label for="bidComment">Bid Comment</label>
+            <textarea class="form-control" id="bidComment" rows="3" placeholder="Enter bid comment"></textarea>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeBidModal()">Close</button>
+        <button type="button" class="btn btn-primary">Submit Bid</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+.card {
+  margin: 300px auto;
+  width: 600px;
+  padding: 20px;
+  height: auto;
+  color: white;
+  text-align: justify;
+  background-color: aliceblue;
+}

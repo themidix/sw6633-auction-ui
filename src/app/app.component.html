@@ -1,0 +1,27 @@
+<!--<i class="fa-solid fa-bars"></i>-->
+<div class="container-fluid g-0">
+  <app-header (sideNavToggled)="inputStatus=$event;"></app-header>
+  <main>
+    <app-side-nav [ngClass]="
+    {'app-side-nav-open': inputStatus}" [inputStatus] ="inputStatus"></app-side-nav>
+    <div class="display-area p-3" [ngClass]="{'display-area-shrink': inputStatus}">
+      <p class="fs-1 fw-bold fst-italic">
+
+        <router-outlet></router-outlet>
+      </p>
+
+    </div>
+  </main>
+</div>
+
+
+<!--<body id="mainBody">-->
+<!--  -->
+<!--  <app-navbar></app-navbar>-->
+<!--  <div class="wrapper">-->
+<!--    &lt;!&ndash;  <app-auction-item></app-auction-item>&ndash;&gt;-->
+<!--    <div class="main">-->
+<!--      <router-outlet></router-outlet>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</body>-->

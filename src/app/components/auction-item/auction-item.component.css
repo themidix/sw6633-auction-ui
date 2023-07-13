@@ -1,0 +1,123 @@
+/*.bid-input-field {*/
+/*  width: 200px;*/
+/*  padding: 8px;*/
+/*  border: 1px solid #ccc;*/
+/*  border-radius: 4px;*/
+/*}*/
+/*.bid-button {*/
+/*  background-color: #4caf50;*/
+/*  color: white;*/
+/*  padding: 8px 16px;*/
+/*  border: none;*/
+/*  border-radius: 4px;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*.bid-button:hover {*/
+/*  background-color: #45a049;*/
+/*}*/
+
+.product{
+  padding: 40px 0;
+}
+.box{
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.content h4{
+  margin-top: 10px;
+}
+.btn{
+  background: blue;
+  /*border-radius: 50%;*/
+  font-size: 16px;
+}
+.bd_btn{
+  border-radius: 4px;
+  background: blue;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 4px 16px;
+  text-transform: capitalize;
+  transition: 0.4s;
+}
+.bd_btn:hover{
+  color:rgb(94,0,0);
+  background: transparent;
+}
+.product_description{
+  text-align: center;
+  background-size: auto;
+}
+
+.small-text {
+  font-size: 14px;
+}
+/* Custom styles for the bid modal */
+.bid-modal {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.bid-modal .modal-dialog {
+  margin-top: 15%; /* Adjust the margin as desired */
+}
+
+.bid-modal .modal-content {
+  background-color: #fff; /* Modal content background color */
+  border-radius: 10px;
+}
+
+.bid-modal .modal-header {
+  background-color: #f8f9fa; /* Header background color */
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+}
+
+.bid-modal .modal-title {
+  font-size: 18px; /* Header title font size */
+  font-weight: bold;
+}
+
+.bid-modal .modal-body {
+  padding: 20px;
+}
+
+.bid-modal .modal-footer {
+  background-color: #f8f9fa; /* Footer background color */
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}
+
+.bid-modal .btn-secondary {
+  background-color: #6c757d; /* Close button background color */
+  color: #fff; /* Close button text color */
+}
+
+.bid-modal .btn-primary {
+  background-color: #007bff; /* Submit button background color */
+  color: #fff; /* Submit button text color */
+}
+
+.bid-modal .close {
+  color: #000; /* Close button color */
+  font-size: 20px; /* Close button font size */
+  font-weight: bold;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.bid-modal .close:hover {
+  color: #ff0000; /* Close button hover color */
+  opacity: 1;
+}
+.bid-modal .modal-dialog {
+  max-width: 400px; /* Adjust the maximum width as desired */
+}
+
+/* Add any additional custom styles here */
+
+
+
